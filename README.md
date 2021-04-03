@@ -12,6 +12,8 @@ Works by connecting these services up to each other, in order:
 4. Spotify Web API
 5. Spotify on your computer
 
+Based on [Adorable QTPI](https://github.com/The-Silverwood-Institute/Adorable-QTPI/)
+
 ## Requirements
 
 - [Python 3](https://www.python.org/downloads/)
