@@ -1,6 +1,7 @@
 import configparser
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+from mqtt_listener import start_listener
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -18,11 +19,13 @@ if device_id is None:
 
 print(f'Found device: {device_id}')
 
-while True:
-    input('Play?')
-    print('Playing...')
-    sp.start_playback(device_id)
+def on_message(client, userdata, msg):
+    user_command = msg.payload.decode('utf-8')
+    print(f"Recieved command: '{user_command}'")
 
-    input('Pause?')
-    print('Pausing...')
-    sp.pause_playback(device_id)
+    if user_command == 'pause':
+        sp.pause_playback(device_id)
+    elif user_command in ['play', 'resume']:
+        sp.start_playback(device_id)
+
+start_listener(config['mqtt'], on_message)
