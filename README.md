@@ -18,23 +18,23 @@ Works by connecting these services up to each other, in order:
 1. Install Python libraries: `pip3 install -r requirements.txt`
 2. Copy `example.ini` to `config.ini`
 3. Set up an MQTT topic:
-  1. Set up an [IO Adafruit account](https://io.adafruit.com/)
-  2. Create a new [feed](https://io.adafruit.com/kittsville/feeds) called `astra`
-  3. In `config.ini` under `mqtt` set:
-    - `topic` from _Feed Info_ under the feed's name
-    - `username` is from _My Key_ -> _Username_ at the top of the page
-    - `password` is from _My Key_ -> _Active Key_ at the top of the page
+    1. Set up an [IO Adafruit account](https://io.adafruit.com/)
+    2. Create a new [feed](https://io.adafruit.com/kittsville/feeds) called `astra`
+    3. In `config.ini` under `mqtt` set:
+        - `topic` from _Feed Info_ under the feed's name
+        - `username` is from _My Key_ -> _Username_ at the top of the page
+        - `password` is from _My Key_ -> _Active Key_ at the top of the page
 4. Set up a Spotify App:
-  1. Create your [Spotify app](https://developer.spotify.com/dashboard)
-  2. In `config.ini` under `spotify` set `client_id`/`client_secret`
-  3. Edit your app settings to add the Redirect URI `http://localhost:4000/callback`
+    1. Create your [Spotify app](https://developer.spotify.com/dashboard)
+    2. In `config.ini` under `spotify` set `client_id`/`client_secret`
+    3. Edit your app settings to add the Redirect URI `http://localhost:4000/callback`
 5. Set up IFTTT:
-  1. [Create](https://ifttt.com/create) an IFTTT Applet
-  2. Set _If This_ to the _Google Assistant_ trigger _Say a phrase with both a number and a text ingredient_
-  3. Choose your activation phrase/reply, remembering to include the `$` in the phrase e.g. "music $"
-  4. Set _Then That_ to _Adafruit IO_
-  5. Choose your _Feed_ from earlier as the _Feed name_
-  6. For _Data to save_ use _Add ingredient_ and select _TextField_
+    1. [Create](https://ifttt.com/create) an IFTTT Applet
+    2. Set _If This_ to the _Google Assistant_ trigger _Say a phrase with both a number and a text ingredient_
+    3. Choose your activation phrase/reply, remembering to include the `$` in the phrase e.g. "music $"
+    4. Set _Then That_ to _Adafruit IO_
+    5. Choose your _Feed_ from earlier as the _Feed name_
+    6. For _Data to save_ use _Add ingredient_ and select _TextField_
 
 ## Usage
 
