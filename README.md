@@ -1,4 +1,5 @@
-# astra-spotifarum
+# Astra Spotifarum
+
 Control Spotify on your computer remotely with a Google Nest e.g. "hey Google, music pause". Useful if you typically listen to music in bed from your Desktop computer.
 
 Google Nest has [native support](https://support.spotify.com/us/article/spotify-on-google-home/) for Spotify remote control, so you should probably only use Astra if you have additional requirements to what they offer.
